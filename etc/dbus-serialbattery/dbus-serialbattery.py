@@ -235,7 +235,7 @@ def main():
         venus_version = f.readline().strip()
 
     # read the GX device type
-    with open("/sys/firmware/devicetree/base/model", "r") as f:
+    with open("./model", "r") as f:
         gx_device_type = f.readline().strip()
 
     # show Venus OS version and device type

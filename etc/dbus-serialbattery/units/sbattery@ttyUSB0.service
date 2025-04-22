@@ -1,0 +1,17 @@
+[Unit]
+Description=Serve a dbus_serialbattery interface on %i
+After=gui.service localsettings.service
+Requires=localsettings.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/victronenergy/dbus-serialbattery
+ExecStart=/opt/victronenergy/dbus-serialbattery/start-serialbattery.sh %i PRODUCT=FT4232H
+Restart=always
+RestartSec=5
+EnvironmentFile=-/etc/venusian/vars
+EnvironmentFile=-/etc/venusian/%u/%p
+EnvironmentFile=-/etc/venusian/%u/%N
+EnvironmentFile=-/run/user/%U/vars
+EnvironmentFile=-/run/user/%U/%p
+EnvironmentFile=-/run/user/%U/%N

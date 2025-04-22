@@ -8,6 +8,6 @@
 # app=$(dirname $0)/dbus-serialbattery.py
 
 # start -x -s $tty
-app="python /opt/victronenergy/dbus-serialbattery/dbus-serialbattery.py"
+app="python3 /opt/victronenergy/dbus-serialbattery/dbus-serialbattery.py"
 args="/dev/$tty"
 start $args

@@ -1,0 +1,6 @@
+---
+udev:
+ - match:
+    ID_USB_VENDOR_ID: '0403'
+    ID_USB_MODEL_ID: '6011'
+   service: sbattery
