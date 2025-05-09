@@ -287,6 +287,9 @@ if [ -d "$pathGuiV2" ]; then
                 done
             fi
 
+            # TEMPORARY FIX until v3.70
+            dbus -y com.victronenergy.settings /Settings AddSetting Gui RemoteConsoleColorMode 1 i 0 1
+
             echo "done."
 
         fi
