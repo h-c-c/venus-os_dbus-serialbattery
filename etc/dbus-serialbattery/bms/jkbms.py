@@ -343,7 +343,8 @@ class Jkbms(Battery):
             return data[10 : length - 7]
         elif s != crc_lo:
             logger.error("CRC checksum mismatch: Expected 0x%04x, Got 0x%04x" % (crc_lo, s))
-            return False
+            return data[10 : length - 7]
+            #return False
         else:
             logger.error(">>> ERROR: Incorrect Reply ")
             return False
